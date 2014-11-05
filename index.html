@@ -1,1 +1,111 @@
-hello world
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="portfolio">
+    <head>
+        <title>Lavender Chan</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+        <link href="css/customise.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <script src="js/bootstrap-lightbox.js"></script>
+        <link href="css/bootstrap-lightbox.css" rel="stylesheet">
+    </head>
+    
+    <body ng-controller="folioController as folio">
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+   
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a  href="#">About</a></li>
+                <li><a  href="#">Skills</a></li>
+                <li><a  href="#">Recent Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+     
+        <div class="row-centered">
+           
+               <div class="col-md-6 col-md-offset-3">
+                   <br> <br> <br> <br>
+                   <center><h6>Lavender Chan</h6></center>
+               </div>
+        </div> 
+        
+        
+            <!-- Contact Me Section --> 
+        <div class="row buffer "> 
+            <div class="col-md-6 col-md-offset-3">
+                <center>
+                  <a ng-repeat="icons in folio.media" href="{{ icons.link }}">
+                <img width="30px"  style="padding:5px;"   ng-src=" {{ icons.image }}">
+                </a>
+                </center>
+            </div>
+        </div>
+        
+        <!-- About Me Section -->
+        <div class="row buffer">
+               <div class="col-md-6 col-md-offset-3">
+                   <h1><b>About me</b></h1>
+                   Software Engineer, Web Developer and Designer. Check it out below!
+               </div>
+        </div> 
+        <!-- End about me section --> 
+        
+        <!-- Languages --> 
+        <div class="row buffer"> 
+            <div class="col-md-6 col-md-offset-3">
+                <h1><b>Skills</b></h1>
+                Languages: HTML5, CSS3, JQuery, Java, C<br>
+                Tools: Photoshop, Illustrator, InDesign, Sony Vegas, Rhinoceros
+            </div>
+        </div>
+        
+        <!-- Portfolio Section --> 
+        <div class="row buffer">
+            <div class="col-md-6 col-md-offset-3">
+                 <h1><b>Recent Work</b></h1>
+                <div class="buffer" ng-repeat="detail in folio.information">
+                    <div class="row">
+                    <div class="col-md-12">
+                        <h3> {{ detail.name }} </h3> 
+                        <img width="100%" ng-src="{{ detail.image }}"><br><br>
+                            {{ detail.info }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row buffer">
+            <div class="col-md-6 col-md-offset-3">
+                 <h1><b>Designs</b></h1>
+                 <div class="row">
+                <div ng-repeat="designs in folio.design">
+                    <div class="col-md-3">
+                            <img width="130px" ng-src="{{ designs.image }}">                        
+                        </div>
+                </div>
+                 </div>
+            </div>
+        </div>
+       
+</div>
+
+        </body>
+</html>
