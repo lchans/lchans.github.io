@@ -63,12 +63,12 @@ var designs = [
       description: "CSESOC UNSW"},
     { image: "img/designs/arama.jpg",
       name: "Arama Logo",
-      description: "Microsoft Image Cup Entry"},
+      description: "Microsoft Imagine Cup Entry"},
     { image: "img/designs/hoodie.png",
       name: "Hoodie Design",
       description: "CSESOC UNSW"},  
     { image: "img/designs/trivia.png",
-      name: "Arama Logo",
+      name: "Trivia Night Poster",
       description: "CSESOC UNSW"} 
 ]; 
 
