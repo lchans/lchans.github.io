@@ -1,141 +1,280 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html ng-app="portfolio">
-    <head>
-        <title>Lavender Chan</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-        <script src="js/bootstrap.js"></script>
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-        <link href="css/customise.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-        <script src="js/bootstrap-lightbox.js"></script>
-        <link href="css/bootstrap-lightbox.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    </head>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Lavender Chan</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/stylish-portfolio.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-top navbar-right navbar-default navbar-fixed-top" role="navigation">
+        <div class="container text-center">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="smallheading nav navbar-nav navbar-right navbar-center">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Coding Projects</a></li>
+                    <li><a href="#designs">Design Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <img id="profile" src="static/lavender.png">
+        </div>
+    </header>
+
     
-    <body ng-controller="folioController as folio">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <center>
-                        <ul class="nav navbar-nav navbar-center">
-                            <li><a  href="#about">About</a></li>
-                            <li><a  href="#skills">Skills</a></li>
-                            <li><a  href="#work">Recent Work</a></li>
-                            <li><a href="#designs">Designs</a></li>
-                        </ul>
-                    </center>
-                </div>
-            </div>
-        </nav>
-     
-        <div class="row-centered"> 
-               <div class="col-md-6 col-md-offset-3">
-                   <br> <br> <br> <br>
-                   <center><h6>Lavender Chan</h6></center>
-               </div>
-        </div> 
-        
-        
-            <!-- Contact Me Section --> 
-        <a name="about"></a>
-        <div class="row buffer "> 
-            <div class="col-md-6 col-md-offset-3">
-                <center>
-                  <a ng-repeat="icons in folio.media" href="{{ icons.link }}">
-                <img width="30px"  style="padding:5px;"   ng-src=" {{ icons.image }}">
-                </a>
+    <section id="about" class="section bg-primary">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="container">
+                    <div class="col-md-4">
+                        <span class="heading">ABOUT ME</span>
+                        <span class="about">
+                        <p> I'm an Australian 3rd year Software Engineering student, with a solid experience 
+                            in building web and Android applications. I've got a strong passion for UX Design, and in my spare time I love making typographic and vector based illustrations. 
+                        </p>
+                        </span>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="static/me.png" class="img-circle col-md-12">
+                    </div>
+                    <div class="col-md-4">
 
-                </center>
-          
-            </div>
+                        <span class="heading">Skills</span><p>
+                        <span class="about">
+                        <i> Listed in no particular order</i> <br>
+                        <b>Languages:</b>
+                        C, Java, Python, HTML, CSS / Bootstrap, JQuery, JavaScript, Flask, AngularJS<br>
+                        <b>Software:</b>
+                        Photoshop, Illustrator, InDesign, Adobe Premiere Pro <br>
+                        </span>
+                    </div>          
+                </div> 
+            </div> 
         </div>
-                       <a name="skills"></a>
-        <!-- About Me Section -->
+    </section>
 
-        <div class="row buffer">
-               <div class="col-md-6 col-md-offset-3">
-                   <h1><b>About me</b></h1>
-                   Software Engineer, Web Developer and Designer. Check it out below!
-               </div>
 
-        </div> 
-        <!-- End about me section --> 
-          <a name="work"></a>
-        <!-- Languages --> 
-        <div class="row buffer"> 
-            <div class="col-md-6 col-md-offset-3">
+
+    <section id="linkedin" class="section text-center">
+        <h2 style="color: #FFFFFF">Want to know more? </h1><br>
+        <form action="http://www.linkedin.com/profile/view?id=412592987">
+            <input class="btn btn-default btn-lg" type="submit" value="View my LinkedIn!">
+        </form>
+    </section>  
+
+
+    <!-- Portfolio -->
+    <section id="projects" class="section wrapper portfolio">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
                 
-                <h1><b>Skills</b></h1>
-                Languages: HTML, CSS, JQuery, Java, C, Perl, CGI<br>
-                Tools: Photoshop, Illustrator, InDesign, Sony Vegas, Rhinoceros
-            </div>
-          
-        </div>
-            
-        <!-- Portfolio Section --> 
-        <div class="row buffer">
-            <div class="col-md-6 col-md-offset-3">
-                
-                 <h1><b>Recent Work</b></h1>
-                <div class="buffer" ng-repeat="detail in folio.information">
-                    <div class="row">
-                    <div class="col-md-12">
-                        <h3> {{ detail.name }} </h3> 
-                        <a href="{{ detail.link }}">
-                        <img class="img-thumbnail" width="100%" ng-src="{{ detail.image }}"><br><br>
+                <div class="row">
+                    <span class="heading">Coding Projects</span><br><br>
+                    <div class="col-md-4">
+                        <a href="https://github.com/juliawong/android-maps-utils">
+                        <img class="image-portfolio img-portfolio img-responsive" src="static/phone.png">
                         </a>
-                            {{ detail.info }}
-                        </div>
-
+                    </div>
+                    <div class="col-md-4">
+                        <br><br>
+                        <a href="http://columbusapp.herokuapp.com/">
+                        <img class="image-portfolio img-portfolio img-responsive" src="static/columbus.png">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <br><br>
+                        <a href="http://keen-quest-88205.appspot.com/">
+                        <img class="image-portfolio img-portfolio img-responsive" src="static/arc.png">
+                        </a>
                     </div>
                 </div>
-            </div>
-   
-        </div>
-             <a name="designs"></a>
 
-        <div class="row buffer">
-            <div class="col-md-6 col-md-offset-3">  
-            <h1><b>Designs</b></h1>
-                <div class="row"><div class="row">
-                    <div ng-repeat="designs in folio.design">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3> KML and GeoJSON Visualiser </h3>                         
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Columbus Image Viewer </h3> 
+                    </div>
+                    <div class="col-md-4">
+                        <h3> Arc @ UNSW Clubs Execuitive Audit Tool </h3> 
+                    </div>
+                </div> 
+
+                <div class="row">
+                    <div class="col-md-4">
+                        An Android API which allows developers to read a KML or GeoJSON file and display corresponding geometry objects on a Google Map in their Android application. This project was completed as part of the Software Engineering Training Practicum II at Google Sydney. 
+                    </div>
+                    <div class="col-md-4">
+                            A web application which allows users to search for a particular image
+                            based on the location of where it was taken. This application displays 
+                            the number of search results returned as a heat map around on a map. 
+                            This application uses the Google Maps API, Google Geocoding API and the Flickr API.
+                    </div>
+                    <div class="col-md-4">
+                        Flask application written to conduct membership audits of club execuitives 
+                        belonging to Arc @ UNSW. The application takes two CSV files: club execuitive list 
+                        and membership list, then compares both to determine which club execuitive is an Arc member.
+                    </div>
+                </div> 
+                </div>
+            </div>
+    </section>
+
+    <section id="github" class="section text-center">
+    <h2 style="color: #FFFFFF">Want to see more? </h1>
+    <br>
+    <form action="https://github.com/lchans">
+    <input class="btn btn-default btn-lg" type="submit" value="View my Github!">
+    </form>
+    </section>  
+
+    <!-- Footer -->
+    <section id="designs"> 
+        <div class="section text-center container">
+            <span class="heading">Design Projects</span><br><br>
+            <!-- Design Image 1 -->  
+            <div class="row"> 
+                <div class="col-md-3">
+                    <img class="image-portfolio" width="90%" src="static/mario.png">
+                </div>
+                <div class="col-md-3">
+                    <img width="90%" src="static/soctial.png">
+                </div>
+                <div class="col-md-3">
+                    <img width="90%" src="static/campflyer.png">
+                </div>
+                <div class="col-md-3">
+                    <img width="90%" src="static/arama.png">
+                </div>
+            </div>
+            <!-- Design Name 1 -->  
+            <div class="row">
+                <div class="col-md-3">
+                    <br>
+                    <span class="smallheading"> Super Cardio Bros Shirt</span><br>
+                    <span class="subheading"> Medical Revue Society, UNSW</span><br><br>
+                </div>
+                <div class="col-md-3">
+                    <br>
+                     <span class="smallheading">Cocktail Night 2014 Poster</span><br>
+                     <span class="subheading">Computer Science and Engineering Society, UNSW</span><br><br>
+                </div>
+                <div class="col-md-3">
+                    <br>
+                     <span class="smallheading"> First Year Camp 2015 Poster</span><br>
+                     <span class="subheading">Computer Science and Engineering Society, UNSW</span><br><br>
+                </div>
+                <div class="col-md-3">
+                    <br>
+                     <span class="smallheading"> Arama Logo </span><br>
+                     <span class="subheading">Microsoft Imagine Cup Entry</span><br><br>
+                </div>
+
+
+            </div>
+            <!-- Design Description 1-->  
+            <div class="row">
+
+
+
+            </div>
+
+            <!-- Design Image 2 -->  
+            <div class="row"> 
+                <div class="col-md-3">
+                    <img width="90%" src="static/pineapple.png">
+                </div>
+                <div class="col-md-3">
+                    <img width="90%" src="static/iceskating.png">
+                </div>
+                <div class="col-md-3">
+                    <img width="90%" src="static/ironman.png">
+                </div>
+                <div class="col-md-3">
+                    <img width="90%" src="static/hoodie.png">
+                </div>
+            
+            </div>
+            <!-- Design Name 2 -->  
+            <div class="row">
+                <div class="col-md-3">
+                    <br>
+                    <span class="smallheading">First Year Camp Shirt </span><br>
+                    <span class="subheading">Computer Science and Engineering Society, UNSW</span><br><br>
+                </div>
+                <div class="col-md-3">
+                    <br>
+                     <span class="smallheading">Ice Skating Poster </span><br>
+                     <span class="subheading">Computer Science and Engineering Society, UNSW</span><br><br>
+                </div>
+                <div class="col-md-3">
+                    <br>
+                     <span class="smallheading">Iron Man Shirt </span><br>
+                     <span class="subheading">Computer Science and Engineering Revue, UNSW</span><br><br>
+                </div>
+                <div class="col-md-3">
+                    <br>
+                     <span class="smallheading">Hoodie Design </span><br>
+                     <span class="subheading">Computer Science and Engineering Society, UNSW</span><br><br>
+                </div>
+
+
+            </div>
+            <!-- Design Description 2-->  
+            <div class="row">
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section"> 
+    <div class="container">
+            <div class="row text-center">
+                <div class="container">
+                <br>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
                         <div class="col-md-4">
-                            <a class="fancybox" href="{{ designs.image }}">
-                            <img width="100%" ng-src="{{ designs.image }}">
-                            </a> <br>       
-                             <b>{{designs.name}}</b> <br>
-                             <small>{{designs.description}}</small> <br>            
+                            <a href="https://www.linkedin.com/profile/view?id=412592987">
+                                <img src="static/linkedin.png" class="col-md-12">
+                            </a>
                         </div>
-                    </div>
+                         <div class="col-md-4">
+                            <a href="https://plus.google.com/u/0/113761323093515822040/posts">
+                                <img src="static/googleplus.png" class="col-md-12">
+                            </a>
+                        </div>
+                         <div class="col-md-4">
+                            <a href="https://github.com/lchans">
+                                <img src="static/github.png" class="col-md-12">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-       
+    </section> 
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".fancybox").fancybox();
-    });
-</script>
 
+</body>
 
-
-
-
-
-        </body>
 </html>
