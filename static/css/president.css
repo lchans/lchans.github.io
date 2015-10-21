@@ -87,7 +87,8 @@ h11 {
 
 
 #top { 
-	background: url(../images/moi.jpg) no-repeat center center fixed; 
+	background: url(../images/moi.png) no-repeat center center fixed; 
+	background-color: #E74C3C;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -141,6 +142,7 @@ h11 {
 
 #bottom { 
 	background: url("../images/background.jpg");
+	background-color: #E74C3C;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
